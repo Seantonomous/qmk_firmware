@@ -41,12 +41,13 @@ enum {
 
 //Custom
 #define KC_MLOC LCTL(LGUI(KC_Q)) //Lock MacOS
-#define KC_POW  LSFT(LGUI(KC_Q)) //Power Off MacOS
+#define KC_MPOW  LSFT(LGUI(KC_Q)) //Power Off MacOS
 
 //Chumkwm Specific
 //Resize?
 //Move to next/previous window?
 //Probably some custom scripts here
+// - Rebuild firmware + flash: cd ~/repos/qmk_firmware && sudo make keebio/iris:fate_copy:avrdude
 
 #define KC_LAG TD(TD_LGUI_LALT)
 #define KC_RAG TD(TD_RGUI_RALT)
@@ -120,11 +121,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc(
   //,----+----+----+----+----+----.              ,----+----+----+----+----+----.
-     MLOC, F1 , F2 , F3 , F4 , F5 ,                F6 ,EMAIL,WEMAIL, F9 ,F10 ,F11 ,
+     MPOW,    , F2 , F3 , F4 , F5 ,                F6 ,EMAIL,WEMAIL, F9 ,F10 ,F11 ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
+     MLOC,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
-         ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
+     RST ,    ,    ,    ,    ,    ,                   ,    ,    ,    ,    ,    ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
          ,    ,    ,    ,    ,    ,    ,         ,GSTATUS,GADDALL,GCOMMIT,    ,    ,    ,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
